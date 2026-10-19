@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://shaders/thesis_portrait.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/virtual_size = Vector2(72, 96)
+shader_parameter/alpha_cutoff = 0.5
+shader_parameter/palette_mix = 1.0
+shader_parameter/intensity = 1.0
+shader_parameter/scan_strength = 0.14
+shader_parameter/scan_freq = 900.0
+shader_parameter/scan_speed = 6.0
+shader_parameter/crt_grain = 0.05
+shader_parameter/chroma = 0.0014
+shader_parameter/levels = 28.0
+shader_parameter/vignette = 0.4
+shader_parameter/barrel = 0.022
+shader_parameter/crt_tint = Vector3(1.04, 1.0, 1.1)
+shader_parameter/paper_grain = 0.04
+shader_parameter/rim_strength = 0.16
+shader_parameter/rim_color = Color(0.937, 0.89, 0.78, 1)
+shader_parameter/outline_strength = 0.0
+shader_parameter/outline_color = Color(0.078, 0.067, 0.059, 1)
+shader_parameter/flash = 0.0
+shader_parameter/flash_color = Color(0.639, 0.227, 0.196, 1)
+shader_parameter/dissolve = 0.0
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/tint_strength = 0.0

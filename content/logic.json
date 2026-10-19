@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "meta": {
+    "title": "THESIS, PLEASE · 条件链",
+    "description": "编辑器内的可视化判断链。暂不接入游戏运行时；用于先把分支逻辑、比较和组合条件编辑出来。",
+    "updated": "2026-10-19"
+  },
+  "chains": [
+    {
+      "id": "scholarship-basic",
+      "name": "奖学金资格 · 基础链",
+      "description": "GPA → 排名 → 公示天数，任一不满足则退回。演示 condition 的 true/false 分支。",
+      "entry": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "start",
+          "x": 60,
+          "y": 180,
+          "next": "gpa"
+        },
+        {
+          "id": "gpa",
+          "type": "condition",
+          "x": 270,
+          "y": 180,
+          "field": "gpa",
+          "op": ">=",
+          "value": "3.5",
+          "true": "rank",
+          "false": "reject-gpa"
+        },
+        {
+          "id": "rank",
+          "type": "condition",
+          "x": 500,
+          "y": 180,
+          "field": "rank",
+          "op": "<=",
+          "value": "10",
+          "true": "notice",
+          "false": "reject-rank"
+        },
+        {
+          "id": "notice",
+          "type": "condition",
+          "x": 730,
+          "y": 180,
+          "field": "noticeDays",
+          "op": ">=",
+          "value": "3",
+          "true": "approve",
+          "false": "reject-notice"
+        },
+        {
+          "id": "approve",
+          "type": "result",
+          "x": 960,
+          "y": 90,
+          "result": "approve",
+          "label": "通过：材料齐全"
+        },
+        {
+          "id": "reject-gpa",
+          "type": "result",
+          "x": 500,
+          "y": 330,
+          "result": "return",
+          "label": "退回：绩点不足"
+        },
+        {
+          "id": "reject-rank",
+          "type": "result",
+          "x": 700,
+          "y": 400,
+          "result": "return",
+          "label": "退回：排名不足"
+        },
+        {
+          "id": "reject-notice",
+          "type": "result",
+          "x": 930,
+          "y": 330,
+          "result": "return",
+          "label": "退回：公示期不足"
+        }
+      ]
+    },
+    {
+      "id": "honors-composite",
+      "name": "优毕推荐 · 组合条件",
+      "description": "ALL 先筛硬指标，ANY 再判断推荐层级；演示 all / any 嵌套组合。",
+      "entry": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "start",
+          "x": 60,
+          "y": 210,
+          "next": "all-hard"
+        },
+        {
+          "id": "all-hard",
+          "type": "all",
+          "x": 280,
+          "y": 210,
+          "conditions": [
+            {
+              "field": "gpa",
+              "op": ">=",
+              "value": "3.7"
+            },
+            {
+              "field": "rank",
+              "op": "<=",
+              "value": "5"
+            },
+            {
+              "field": "dupRate",
+              "op": "<=",
+              "value": "15"
+            }
+          ],
+          "true": "any-level",
+          "false": "manual"
+        },
+        {
+          "id": "any-level",
+          "type": "any",
+          "x": 520,
+          "y": 150,
+          "conditions": [
+            {
+              "field": "level",
+              "op": "==",
+              "value": "college"
+            },
+            {
+              "field": "level",
+              "op": "==",
+              "value": "school"
+            },
+            {
+              "field": "level",
+              "op": "==",
+              "value": "province"
+            }
+          ],
+          "true": "approve",
+          "false": "manual"
+        },
+        {
+          "id": "approve",
+          "type": "result",
+          "x": 790,
+          "y": 90,
+          "result": "approve",
+          "label": "通过：推荐层级有效"
+        },
+        {
+          "id": "manual",
+          "type": "result",
+          "x": 790,
+          "y": 320,
+          "result": "flag",
+          "label": "转人工：指标或层级异常"
+        }
+      ]
+    },
+    {
+      "id": "exchange-visa",
+      "name": "交换项目 · 签证/语言",
+      "description": "NOT 先排除无效签证，再用 ALL 检查语言与录取；演示 not 与结果标记。",
+      "entry": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "start",
+          "x": 60,
+          "y": 210,
+          "next": "visa"
+        },
+        {
+          "id": "visa",
+          "type": "not",
+          "x": 280,
+          "y": 210,
+          "conditions": [
+            {
+              "field": "visaValid",
+              "op": "==",
+              "value": "true"
+            }
+          ],
+          "true": "visa-bad",
+          "false": "all-language"
+        },
+        {
+          "id": "visa-bad",
+          "type": "result",
+          "x": 500,
+          "y": 80,
+          "result": "reject",
+          "label": "拒绝：签证无效"
+        },
+        {
+          "id": "all-language",
+          "type": "all",
+          "x": 520,
+          "y": 280,
+          "conditions": [
+            {
+              "field": "ielts",
+              "op": ">=",
+              "value": "6.5"
+            },
+            {
+              "field": "offer",
+              "op": "==",
+              "value": "true"
+            }
+          ],
+          "true": "approve",
+          "false": "conditional"
+        },
+        {
+          "id": "approve",
+          "type": "result",
+          "x": 790,
+          "y": 200,
+          "result": "approve",
+          "label": "通过：可派出"
+        },
+        {
+          "id": "conditional",
+          "type": "result",
+          "x": 790,
+          "y": 360,
+          "result": "flag",
+          "label": "条件通过：补语言/录取"
+        }
+      ]
+    }
+  ]
+}

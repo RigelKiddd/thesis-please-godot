@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/ChatPanel.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/PixelPanel.gd" id="2"]
+
+[node name="ChatPanel" type="Control"]
+offset_right = 441.0
+offset_bottom = 205.0
+script = ExtResource("1")
+bg_color = Color(0.105882, 0.137255, 0.117647, 1)
+border_width = 3
+border_color = Color(0.0705882, 0.0823529, 0.0588235, 1)
+shadow_offset = Vector2(5, 6)
+
+[node name="Header" type="Control" parent="."]
+offset_right = 441.0
+offset_bottom = 32.0
+script = ExtResource("2")
+bg_color = Color(0.184314, 0.227451, 0.184314, 1)
+border_widths = Vector4i(0, 0, 0, 2)
+border_color = Color(0.0705882, 0.0823529, 0.0588235, 1)
+
+[node name="Paper" type="Control" parent="."]
+offset_top = 32.0
+offset_right = 441.0
+offset_bottom = 169.0
+script = ExtResource("2")
+bg_color = Color(0.909804, 0.87451, 0.788235, 1)
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+offset_left = 6.0
+offset_top = 36.0
+offset_right = 435.0
+offset_bottom = 165.0
+horizontal_scroll_mode = 0
+
+[node name="Footer" type="Control" parent="."]
+offset_top = 169.0
+offset_right = 441.0
+offset_bottom = 205.0
+script = ExtResource("2")
+bg_color = Color(0.823529, 0.764706, 0.611765, 1)
+border_widths = Vector4i(0, 2, 0, 0)
+border_color = Color(0.0705882, 0.0823529, 0.0588235, 1)

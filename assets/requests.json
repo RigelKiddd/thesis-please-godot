@@ -1,0 +1,3332 @@
+{
+  "requests": [
+    {
+      "id": "leave-d1-1d",
+      "kind": "leave",
+      "variant": "1 天",
+      "material": "carbonless",
+      "title": "学生请假条",
+      "subtitle": "LEAVE APPLICATION / 1 DAY",
+      "header": "请假申请",
+      "seal": "辅导员",
+      "summary": "校医院复诊，手续齐全。",
+      "criteria": [
+        "请假 3 天以内由辅导员审批",
+        "导师签字、事由与附件一致",
+        "无课程冲突"
+      ],
+      "documents": [
+        {
+          "id": "leave-form",
+          "tab": "请假条",
+          "icon": "假",
+          "kind": "leave",
+          "style": "carbonless",
+          "org": "明州大学 · 学生请假审批单",
+          "title": "学生请假条",
+          "subtitle": "LEAVE APPLICATION / 1 DAY",
+          "ref": "QJ-2026-0511-01",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "请假起止",
+              "2026.05.11（1 天）"
+            ],
+            [
+              "事由",
+              "校医院复诊（附预约单）"
+            ],
+            [
+              "联系电话",
+              "138****2210"
+            ],
+            [
+              "去向",
+              "明州大学校医院"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "导师意见",
+              "text": "同意。实验数据已交接，复诊后按计划返校。"
+            }
+          ],
+          "signature": [
+            [
+              "导师签字",
+              "{{advisor}}"
+            ],
+            [
+              "辅导员签字",
+              "沈老师"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "辅导员",
+            "date": "2026.05.11"
+          },
+          "note": "按《学生请假管理办法》第 3 条办理；返校后到辅导员处销假。"
+        },
+        {
+          "id": "clinic-slip",
+          "tab": "预约单",
+          "icon": "诊",
+          "kind": "slip",
+          "style": "cardstock",
+          "org": "明州大学校医院",
+          "title": "门诊预约单",
+          "subtitle": "CLINIC APPOINTMENT",
+          "ref": "YY-2026-0511-0930",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "科室",
+              "内科"
+            ],
+            [
+              "预约时间",
+              "2026.05.11 09:30"
+            ],
+            [
+              "接诊医生",
+              "陈医生"
+            ],
+            [
+              "预约号",
+              "A-0930"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "就诊提示",
+              "text": "请携带校园卡提前十分钟到一楼分诊台取号。复诊结果由校医院出具。"
+            }
+          ],
+          "note": "本预约单与请假条一并归档。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "请假起止",
+          "v": "2026.05.11（1 天）",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "导师签字",
+          "v": "已签字",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "课程冲突",
+          "v": "无",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "事由",
+          "v": "校医院复诊，附预约单",
+          "ok": true,
+          "source": "clinic-slip"
+        }
+      ],
+      "expected": "approve",
+      "approveText": "手续齐全，准假 1 天。",
+      "returnText": "手续不全，按旷课处理。",
+      "favor": {
+        "approve": {
+          "counselor": 2,
+          "student": 1
+        },
+        "return": {
+          "counselor": -1,
+          "director": 1
+        }
+      },
+      "day": 1,
+      "applicantIndex": 0,
+      "applicantId": "2022010417"
+    },
+    {
+      "id": "scholarship-d2-incentive",
+      "kind": "scholarship",
+      "variant": "国家励志",
+      "material": "certificate",
+      "title": "国家励志奖学金申请表",
+      "subtitle": "NATIONAL INCENTIVE SCHOLARSHIP / 2026",
+      "header": "奖学金评审",
+      "seal": "学生处",
+      "summary": "成绩与困难认定通过，班级公示只有 1 日。",
+      "criteria": [
+        "学年绩点不低于 3.5",
+        "专业排名前 10%",
+        "家庭经济困难认定在有效期内",
+        "班级公示满 3 个工作日"
+      ],
+      "documents": [
+        {
+          "id": "application",
+          "tab": "申请表",
+          "icon": "申",
+          "kind": "application",
+          "style": "certificate",
+          "org": "明州大学学生工作处",
+          "title": "国家励志奖学金申请表",
+          "subtitle": "NATIONAL INCENTIVE SCHOLARSHIP / 2026",
+          "ref": "MDXG-2026-0512-07",
+          "photo": true,
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院",
+              "{{college}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "学年",
+              "2025—2026"
+            ],
+            [
+              "困难认定",
+              "一般困难（在有效期内）"
+            ],
+            [
+              "综合测评",
+              "4 / 118"
+            ],
+            [
+              "申请档次",
+              "国家励志奖学金"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "申请理由",
+              "text": "家庭主要收入来自父亲务农与母亲零工，年收入约 ¥28,000，需负担祖母长期用药。本人已通过 2025—2026 学年家庭经济困难认定。"
+            },
+            {
+              "label": "在校表现",
+              "text": "学年绩点 3.72，专业排名 4/118；担任班级学习委员，无违纪记录。"
+            }
+          ],
+          "signature": [
+            [
+              "申请人签字",
+              "{{name}}"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学生工作处",
+            "date": "2026.05.12"
+          },
+          "note": "本表须附学年成绩单、困难认定与班级公示；材料不齐不予受理。"
+        },
+        {
+          "id": "transcript",
+          "tab": "成绩单",
+          "icon": "绩",
+          "kind": "transcript",
+          "style": "sealed",
+          "org": "明州大学教务处",
+          "title": "2025—2026 学年成绩单",
+          "subtitle": "ACADEMIC TRANSCRIPT / SEALED",
+          "ref": "JW-2026-0512-118",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "课程",
+              "学分",
+              "成绩"
+            ],
+            "rows": [
+              [
+                "高级财务会计",
+                "4.0",
+                "92"
+              ],
+              [
+                "审计学",
+                "3.0",
+                "89"
+              ],
+              [
+                "财务管理",
+                "3.0",
+                "91"
+              ],
+              [
+                "税法",
+                "2.0",
+                "87"
+              ],
+              [
+                "成本会计",
+                "3.0",
+                "90"
+              ],
+              [
+                "管理信息系统",
+                "2.0",
+                "86"
+              ],
+              [
+                "毕业论文（设计）",
+                "8.0",
+                "优秀"
+              ],
+              [
+                "专业实习",
+                "4.0",
+                "优秀"
+              ]
+            ]
+          },
+          "stats": [
+            {
+              "k": "学年绩点",
+              "v": "3.72 / 4.0"
+            },
+            {
+              "k": "专业排名",
+              "v": "4 / 118"
+            },
+            {
+              "k": "已修学分",
+              "v": "168 / 160"
+            }
+          ],
+          "note": "本成绩单由教务管理系统生成，涂改无效；核验码 JW-118-2026。",
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.12"
+          }
+        },
+        {
+          "id": "difficulty",
+          "tab": "困难认定",
+          "icon": "困",
+          "kind": "certificate",
+          "style": "carbonless",
+          "org": "明州大学学生资助管理中心",
+          "title": "家庭经济困难学生认定表",
+          "subtitle": "FINANCIAL NEED CERTIFICATION",
+          "ref": "ZZ-2025-118-041",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "认定等级",
+              "一般困难"
+            ],
+            [
+              "认定年度",
+              "2025—2026"
+            ],
+            [
+              "有效期至",
+              "2026.08.31"
+            ],
+            [
+              "家庭人口",
+              "4 人"
+            ],
+            [
+              "家庭年收入",
+              "¥28,000"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "认定依据",
+              "text": "家庭人均收入低于当地最低生活保障标准 1.5 倍，且祖母长期用药支出占家庭收入三分之一；经班级评议、学院审核并公示无异议。"
+            }
+          ],
+          "signature": [
+            [
+              "辅导员",
+              "沈老师"
+            ],
+            [
+              "学院审核",
+              "会计学院学生工作办公室"
+            ],
+            [
+              "日期",
+              "2025.09.18"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学生资助中心",
+            "date": "2025.09.18"
+          },
+          "note": "认定结果在 2025—2026 学年内有效，跨学年须重新认定。"
+        },
+        {
+          "id": "notice",
+          "tab": "班级公示",
+          "icon": "示",
+          "kind": "notice",
+          "style": "mimeo",
+          "org": "明州大学 · 会计学院",
+          "title": "国家励志奖学金班级公示",
+          "subtitle": "CLASS NOTICE / 2025—2026",
+          "ref": "公示〔2026〕第 07 号",
+          "fields": [
+            [
+              "公示对象",
+              "{{name}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "公示期",
+              "2026.05.09—2026.05.09（1 日）"
+            ],
+            [
+              "公示地点",
+              "会计学院公告栏"
+            ],
+            [
+              "异议受理",
+              "学院学生工作办公室 沈老师"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "公示说明",
+              "text": "根据《明州大学国家励志奖学金评审办法》，经班级评议小组推荐，现将拟推荐名单予以公示。公示期间如有异议，请以书面形式向学院学生工作办公室反映。"
+            }
+          ],
+          "table": {
+            "columns": [
+              "序号",
+              "姓名",
+              "学号",
+              "综合测评"
+            ],
+            "rows": [
+              [
+                "1",
+                "{{name}}",
+                "{{studentId}}",
+                "4 / 118"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "班委会",
+              "王雨桐"
+            ],
+            [
+              "日期",
+              "2026.05.09"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "会计学院",
+            "date": "2026.05.09"
+          },
+          "note": "公示期应满 3 个工作日；公示无异议后方可报送学生处。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "学年绩点",
+          "v": "3.72 / 4.0",
+          "ok": true,
+          "source": "transcript"
+        },
+        {
+          "k": "专业排名",
+          "v": "4 / 118",
+          "ok": true,
+          "source": "transcript"
+        },
+        {
+          "k": "困难认定",
+          "v": "已认定（一般困难）",
+          "ok": true,
+          "source": "difficulty"
+        },
+        {
+          "k": "班级公示",
+          "v": "仅公示 1 日，未满 3 日",
+          "ok": false,
+          "source": "notice"
+        }
+      ],
+      "expected": "return",
+      "approveText": "材料齐全，报学生处。",
+      "returnText": "缺 3 日班级公示，补齐后再报。",
+      "favor": {
+        "approve": {
+          "director": 2,
+          "student": 1
+        },
+        "return": {
+          "director": 1,
+          "student": -1
+        }
+      },
+      "day": 2,
+      "applicantIndex": 0,
+      "applicantId": "2022010516"
+    },
+    {
+      "id": "scholarship-d3-national",
+      "kind": "scholarship",
+      "variant": "国家奖学金",
+      "material": "certificate",
+      "title": "国家奖学金申请表",
+      "subtitle": "NATIONAL SCHOLARSHIP / 2026",
+      "header": "奖学金评审",
+      "seal": "学生处",
+      "summary": "绩点、排名、公示、名额全部符合。",
+      "criteria": [
+        "学年绩点不低于 3.8",
+        "专业排名前 1%",
+        "班级公示满 5 个工作日",
+        "学院名额未超额"
+      ],
+      "documents": [
+        {
+          "id": "application",
+          "tab": "申请表",
+          "icon": "申",
+          "kind": "application",
+          "style": "certificate",
+          "org": "明州大学学生工作处",
+          "title": "国家奖学金申请表",
+          "subtitle": "NATIONAL SCHOLARSHIP / 2026",
+          "ref": "MDXG-2026-0513-02",
+          "photo": true,
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院",
+              "{{college}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "学年",
+              "2025—2026"
+            ],
+            [
+              "综合测评",
+              "1 / 118"
+            ],
+            [
+              "申请档次",
+              "国家奖学金"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "申请理由",
+              "text": "本人在 2025—2026 学年综合测评位列专业第一，主持校级创新项目一项，获省级学科竞赛二等奖。"
+            },
+            {
+              "label": "在校表现",
+              "text": "学年绩点 3.90，无补考、无违纪；担任班长，参与学院学风建设。"
+            }
+          ],
+          "signature": [
+            [
+              "申请人签字",
+              "{{name}}"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学生工作处",
+            "date": "2026.05.13"
+          },
+          "note": "国家奖学金与励志奖学金不可兼得。"
+        },
+        {
+          "id": "transcript",
+          "tab": "成绩单",
+          "icon": "绩",
+          "kind": "transcript",
+          "style": "sealed",
+          "org": "明州大学教务处",
+          "title": "2025—2026 学年成绩单",
+          "subtitle": "ACADEMIC TRANSCRIPT / SEALED",
+          "ref": "JW-2026-0513-061",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "课程",
+              "学分",
+              "成绩"
+            ],
+            "rows": [
+              [
+                "内科护理学",
+                "4.0",
+                "95"
+              ],
+              [
+                "外科护理学",
+                "3.0",
+                "93"
+              ],
+              [
+                "基础护理学",
+                "3.0",
+                "94"
+              ],
+              [
+                "妇产科护理学",
+                "3.0",
+                "91"
+              ],
+              [
+                "儿科护理学",
+                "2.0",
+                "92"
+              ],
+              [
+                "毕业论文（设计）",
+                "8.0",
+                "优秀"
+              ]
+            ]
+          },
+          "stats": [
+            {
+              "k": "学年绩点",
+              "v": "3.90 / 4.0"
+            },
+            {
+              "k": "专业排名",
+              "v": "1 / 118"
+            },
+            {
+              "k": "已修学分",
+              "v": "172 / 160"
+            }
+          ],
+          "note": "本成绩单由教务管理系统生成，涂改无效；核验码 JW-061-2026。",
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.13"
+          }
+        },
+        {
+          "id": "notice",
+          "tab": "班级公示",
+          "icon": "示",
+          "kind": "notice",
+          "style": "mimeo",
+          "org": "明州大学 · 外国语学院",
+          "title": "国家奖学金班级公示",
+          "subtitle": "CLASS NOTICE / 2025—2026",
+          "ref": "公示〔2026〕第 11 号",
+          "fields": [
+            [
+              "公示对象",
+              "{{name}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "公示期",
+              "2026.05.07—2026.05.13（5 个工作日）"
+            ],
+            [
+              "公示地点",
+              "学院公告栏 / 学院网站"
+            ],
+            [
+              "异议受理",
+              "学院学生工作办公室"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "公示说明",
+              "text": "经班级评议、学院评审，拟推荐该同学参评国家奖学金。公示期内未收到异议。"
+            }
+          ],
+          "table": {
+            "columns": [
+              "序号",
+              "姓名",
+              "学号",
+              "综合测评"
+            ],
+            "rows": [
+              [
+                "1",
+                "{{name}}",
+                "{{studentId}}",
+                "1 / 118"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "班委会",
+              "李思远"
+            ],
+            [
+              "日期",
+              "2026.05.13"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "外国语学院",
+            "date": "2026.05.13"
+          },
+          "note": "公示满 5 个工作日，无异议。"
+        },
+        {
+          "id": "quota",
+          "tab": "名额核定",
+          "icon": "额",
+          "kind": "quota",
+          "style": "cardstock",
+          "org": "明州大学学生工作处",
+          "title": "国家奖学金名额核定单",
+          "subtitle": "QUOTA CONFIRMATION / 2026",
+          "ref": "ME-2026-0513-01",
+          "fields": [
+            [
+              "学院",
+              "外国语学院"
+            ],
+            [
+              "核定名额",
+              "1"
+            ],
+            [
+              "已推荐",
+              "1"
+            ],
+            [
+              "剩余名额",
+              "0"
+            ],
+            [
+              "核定日期",
+              "2026.04.28"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "核定意见",
+              "text": "外国语学院 2025—2026 学年国家奖学金名额 1 名，按评选办法等额推荐。"
+            }
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学生工作处",
+            "date": "2026.04.28"
+          },
+          "note": "名额使用完毕后不再递补。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "学年绩点",
+          "v": "3.90 / 4.0",
+          "ok": true,
+          "source": "transcript"
+        },
+        {
+          "k": "专业排名",
+          "v": "1 / 118",
+          "ok": true,
+          "source": "transcript"
+        },
+        {
+          "k": "班级公示",
+          "v": "已公示 5 个工作日",
+          "ok": true,
+          "source": "notice"
+        },
+        {
+          "k": "学院名额",
+          "v": "1 / 1",
+          "ok": true,
+          "source": "quota"
+        }
+      ],
+      "expected": "approve",
+      "approveText": "材料齐全，报学生处。",
+      "returnText": "材料不齐，退回补正。",
+      "favor": {
+        "approve": {
+          "director": 2,
+          "student": 1
+        },
+        "return": {
+          "director": 1,
+          "student": -1
+        }
+      },
+      "day": 3,
+      "applicantIndex": 0,
+      "applicantId": "2022010611"
+    },
+    {
+      "id": "exchange-d3-exchange",
+      "kind": "exchange",
+      "variant": "秋季交换",
+      "material": "admission",
+      "title": "交换生项目申请表",
+      "subtitle": "EXCHANGE PROGRAM / FALL 2026",
+      "header": "国际交流",
+      "seal": "国际处",
+      "summary": "语言与绩点达标，但护照有效期不足。",
+      "criteria": [
+        "合作院校交换名额已确认",
+        "语言成绩达到 IELTS 6.5 或同等",
+        "护照有效期覆盖交换结束并至少多 6 个月",
+        "学院与国际处签字"
+      ],
+      "documents": [
+        {
+          "id": "exchange-application",
+          "tab": "交换申请",
+          "icon": "换",
+          "kind": "application",
+          "style": "admission",
+          "org": "明州大学国际交流处",
+          "title": "交换生项目申请表",
+          "subtitle": "EXCHANGE PROGRAM / FALL 2026",
+          "ref": "GJ-2026-0513-02",
+          "photo": true,
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "合作院校",
+              "北陆大学（交换名额 2 人）"
+            ],
+            [
+              "交换学期",
+              "2026.09—2027.01"
+            ],
+            [
+              "申请绩点",
+              "3.42 / 4.0"
+            ],
+            [
+              "语言成绩",
+              "IELTS 6.5"
+            ],
+            [
+              "名额状态",
+              "已确认（第 1 顺位）"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "申请理由",
+              "text": "本人已完成交换项目先修课程，计划赴北陆大学选修比较文学与跨文化研究课程，回校后按培养方案认定学分。"
+            },
+            {
+              "label": "学院意见",
+              "text": "该生课程安排可衔接，同意推荐；交换期间由导师远程指导毕业论文。"
+            }
+          ],
+          "signature": [
+            [
+              "申请人",
+              "{{name}}"
+            ],
+            [
+              "学院负责人",
+              "韩老师"
+            ],
+            [
+              "国际处",
+              "赵老师"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "国际交流处",
+            "date": "2026.05.13"
+          },
+          "note": "派出前须完成护照有效期核验、保险购买与学分认定表。"
+        },
+        {
+          "id": "language-score",
+          "tab": "语言成绩",
+          "icon": "语",
+          "kind": "report",
+          "style": "sealed",
+          "org": "明州大学外语测试中心",
+          "title": "IELTS 语言成绩证明",
+          "subtitle": "ENGLISH LANGUAGE TEST / SEALED",
+          "ref": "WY-2026-0428-17",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "考试日期",
+              "2026.04.18"
+            ],
+            [
+              "考试类型",
+              "IELTS Academic"
+            ],
+            [
+              "总分",
+              "6.5"
+            ],
+            [
+              "单项最低",
+              "6.0（写作）"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "单项",
+              "成绩",
+              "项目要求"
+            ],
+            "rows": [
+              [
+                "听力",
+                "7.0",
+                "≥ 6.0"
+              ],
+              [
+                "阅读",
+                "6.5",
+                "≥ 6.0"
+              ],
+              [
+                "写作",
+                "6.0",
+                "≥ 6.0"
+              ],
+              [
+                "口语",
+                "6.5",
+                "≥ 6.0"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "测试中心",
+              "明州大学外语测试中心"
+            ],
+            [
+              "日期",
+              "2026.04.28"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "外语测试中心",
+            "date": "2026.04.28"
+          },
+          "note": "成绩有效期为两年；本证明仅用于交换项目申请。"
+        },
+        {
+          "id": "passport-page",
+          "tab": "护照页",
+          "icon": "护",
+          "kind": "passport",
+          "style": "passport",
+          "org": "中华人民共和国 · 护照资料页",
+          "title": "护照资料页 / PASSPORT",
+          "subtitle": "PASSPORT DATA PAGE",
+          "ref": "EJ-2026-0513-08",
+          "photo": true,
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "护照号码",
+              "E12345678"
+            ],
+            [
+              "签发机关",
+              "明州市公安局出入境管理局"
+            ],
+            [
+              "签发日期",
+              "2016.10.16"
+            ],
+            [
+              "有效期至",
+              "2026.10.15"
+            ],
+            [
+              "出生日期",
+              "2002.03.08"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "签证页",
+              "text": "北陆大学交换项目签证类型：Cultural Exchange；拟入境日期 2026.09.01，离境日期 2027.01.20。"
+            },
+            {
+              "label": "核验提示",
+              "text": "护照有效期至 2026.10.15，早于交换结束 2027.01.20，且不足交换结束后 6 个月。"
+            }
+          ],
+          "signature": [
+            [
+              "申请人签字",
+              "{{name}}"
+            ],
+            [
+              "核验人",
+              "国际处 赵老师"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "国际交流处",
+            "date": "2026.05.13"
+          },
+          "note": "护照有效期不足是退回项；应先换发护照再提交签证材料。"
+        },
+        {
+          "id": "exchange-approval",
+          "tab": "学院审批",
+          "icon": "审",
+          "kind": "certificate",
+          "style": "certificate",
+          "org": "明州大学文学院",
+          "title": "交换项目学院审批表",
+          "subtitle": "COLLEGE APPROVAL / EXCHANGE",
+          "ref": "WX-2026-0513-04",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "交换院校",
+              "北陆大学"
+            ],
+            [
+              "学分认定",
+              "拟认定 12 学分"
+            ],
+            [
+              "导师",
+              "{{advisor}}"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "审批意见",
+              "text": "课程衔接与学分认定方案已审核，同意派出。请国际处复核护照与签证材料。"
+            }
+          ],
+          "signature": [
+            [
+              "教学院长",
+              "韩老师"
+            ],
+            [
+              "日期",
+              "2026.05.13"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "文学院",
+            "date": "2026.05.13"
+          },
+          "note": "学院审批不替代国际处与签证审核。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "交换名额",
+          "v": "已确认",
+          "ok": true,
+          "source": "exchange-application"
+        },
+        {
+          "k": "语言成绩",
+          "v": "IELTS 6.5",
+          "ok": true,
+          "source": "language-score"
+        },
+        {
+          "k": "护照有效期",
+          "v": "2026.10.15（不足）",
+          "ok": false,
+          "source": "passport-page"
+        },
+        {
+          "k": "学院签字",
+          "v": "已签",
+          "ok": true,
+          "source": "exchange-approval"
+        }
+      ],
+      "expected": "return",
+      "approveText": "材料齐全，同意派出；请按国际处安排办理签证。",
+      "returnText": "护照有效期不足，先换发护照后再提交交换申请。",
+      "favor": {
+        "approve": {
+          "director": 1,
+          "colleague": 1
+        },
+        "return": {
+          "director": 1
+        }
+      },
+      "day": 3,
+      "applicantIndex": 1,
+      "applicantId": "2022010619"
+    },
+    {
+      "id": "honors-d4-college",
+      "kind": "honors",
+      "variant": "院级",
+      "material": "cardstock",
+      "title": "优秀毕业论文推荐表",
+      "subtitle": "OUTSTANDING THESIS / COLLEGE LEVEL",
+      "header": "优秀毕业论文",
+      "seal": "学院",
+      "summary": "推荐表填报的查重率与报告不一致。",
+      "criteria": [
+        "推荐表信息与论文、查重报告一致",
+        "查重报告有编号与教务处签章",
+        "导师推荐意见签字齐全"
+      ],
+      "documents": [
+        {
+          "id": "recommend",
+          "tab": "推荐表",
+          "icon": "荐",
+          "kind": "recommend",
+          "style": "cardstock",
+          "org": "明州大学 · 学院优秀毕业论文评审组",
+          "title": "优秀毕业论文推荐表",
+          "subtitle": "OUTSTANDING THESIS / COLLEGE LEVEL",
+          "ref": "YX-2026-0514-07",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "论文题目",
+              "{{cover_title}}"
+            ],
+            [
+              "推荐级别",
+              "院级"
+            ],
+            [
+              "指导教师",
+              "{{advisor}}"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "项目",
+              "推荐表填报",
+              "查重报告"
+            ],
+            "rows": [
+              [
+                "文字复制比",
+                "{{form_rate}}%",
+                "{{dup_rate}}%"
+              ],
+              [
+                "论文题目",
+                "{{cover_title}}",
+                "{{cover_title}}"
+              ]
+            ]
+          },
+          "paragraphs": [
+            {
+              "label": "推荐意见",
+              "text": "该论文结构完整、材料扎实，达到院级优秀毕业论文推荐标准。"
+            }
+          ],
+          "signature": [
+            [
+              "指导教师",
+              "{{advisor}}"
+            ],
+            [
+              "学院评审组",
+              "李院长"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学院",
+            "date": "2026.05.14"
+          },
+          "note": "推荐表填报数据须与查重报告原件一致，不一致退回核对。"
+        },
+        {
+          "id": "report",
+          "tab": "查重报告",
+          "icon": "重",
+          "kind": "report",
+          "style": "sealed",
+          "org": "明州大学教务处 · 学术不端检测系统",
+          "title": "毕业论文查重报告",
+          "subtitle": "SIMILARITY REPORT / SEALED",
+          "ref": "CNKI-2026-0514-022",
+          "fields": [
+            [
+              "论文题目",
+              "{{cover_title}}"
+            ],
+            [
+              "作者",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "检测系统",
+              "CNKI 5.3 / 学术不端文献检测"
+            ],
+            [
+              "检测日期",
+              "2026.05.08"
+            ]
+          ],
+          "stats": [
+            {
+              "k": "总文字复制比",
+              "v": "{{dup_rate}}%"
+            },
+            {
+              "k": "去除引用",
+              "v": "9.4%"
+            },
+            {
+              "k": "合格线",
+              "v": "20%"
+            }
+          ],
+          "note": "报告编号 CNKI-2026-0514-022；无教务处电子签章的报告不予采信。",
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.08"
+          }
+        },
+        {
+          "id": "advisor-letter",
+          "tab": "导师推荐",
+          "icon": "导",
+          "kind": "slip",
+          "style": "carbonless",
+          "org": "明州大学文学院",
+          "title": "导师推荐意见",
+          "subtitle": "ADVISOR RECOMMENDATION",
+          "ref": "DS-2026-0514-07",
+          "paragraphs": [
+            {
+              "label": "推荐意见",
+              "text": "该生论文选题具有现实意义，田野材料充分，写作规范。同意推荐参评院级优秀毕业论文。"
+            }
+          ],
+          "signature": [
+            [
+              "指导教师",
+              "{{advisor}}"
+            ],
+            [
+              "日期",
+              "2026.05.10"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "文学院",
+            "date": "2026.05.10"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "k": "论文题目",
+          "v": "{{cover_title}}",
+          "ok": true,
+          "source": "recommend"
+        },
+        {
+          "k": "查重报告",
+          "v": "{{dup_rate}}%",
+          "ok": true,
+          "source": "report"
+        },
+        {
+          "k": "推荐表填报",
+          "v": "{{form_rate}}%",
+          "ok": false,
+          "source": "recommend"
+        },
+        {
+          "k": "导师推荐",
+          "v": "已签字",
+          "ok": true,
+          "source": "advisor-letter"
+        }
+      ],
+      "expected": "return",
+      "approveText": "推荐材料齐全，报教务处。",
+      "returnText": "推荐表与查重报告不一致，退回核对。",
+      "favor": {
+        "approve": {
+          "leader": 1,
+          "student": 1
+        },
+        "return": {
+          "director": 1,
+          "student": -1
+        }
+      },
+      "day": 4,
+      "applicantIndex": 1,
+      "applicantId": "2022010721"
+    },
+    {
+      "id": "honors-d4-school",
+      "kind": "honors",
+      "variant": "校级",
+      "material": "cardstock",
+      "title": "校级优秀毕业论文推荐表",
+      "subtitle": "OUTSTANDING THESIS / SCHOOL LEVEL",
+      "header": "优秀毕业论文",
+      "seal": "教务处",
+      "summary": "推荐表与报告一致，名额未满。",
+      "criteria": [
+        "推荐表信息与论文、查重报告一致",
+        "学院排序在名额范围内",
+        "导师推荐意见签字齐全"
+      ],
+      "documents": [
+        {
+          "id": "recommend",
+          "tab": "推荐表",
+          "icon": "荐",
+          "kind": "recommend",
+          "style": "cardstock",
+          "org": "明州大学 · 校级优秀毕业论文评审组",
+          "title": "校级优秀毕业论文推荐表",
+          "subtitle": "OUTSTANDING THESIS / SCHOOL LEVEL",
+          "ref": "YX-2026-0514-12",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "论文题目",
+              "{{cover_title}}"
+            ],
+            [
+              "推荐级别",
+              "校级"
+            ],
+            [
+              "指导教师",
+              "{{advisor}}"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "项目",
+              "推荐表填报",
+              "查重报告"
+            ],
+            "rows": [
+              [
+                "文字复制比",
+                "{{dup_rate}}%",
+                "{{dup_rate}}%"
+              ],
+              [
+                "论文题目",
+                "{{cover_title}}",
+                "{{cover_title}}"
+              ]
+            ]
+          },
+          "paragraphs": [
+            {
+              "label": "推荐意见",
+              "text": "该论文在院级评审中排名第一，材料与查重报告一致，同意推荐参评校级优秀毕业论文。"
+            }
+          ],
+          "signature": [
+            [
+              "指导教师",
+              "{{advisor}}"
+            ],
+            [
+              "学院评审组",
+              "李院长"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.14"
+          },
+          "note": "校级推荐名额 1 名，学院排序第 1。"
+        },
+        {
+          "id": "report",
+          "tab": "查重报告",
+          "icon": "重",
+          "kind": "report",
+          "style": "sealed",
+          "org": "明州大学教务处 · 学术不端检测系统",
+          "title": "毕业论文查重报告",
+          "subtitle": "SIMILARITY REPORT / SEALED",
+          "ref": "CNKI-2026-0514-031",
+          "fields": [
+            [
+              "论文题目",
+              "{{cover_title}}"
+            ],
+            [
+              "作者",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "检测系统",
+              "CNKI 5.3 / 学术不端文献检测"
+            ],
+            [
+              "检测日期",
+              "2026.05.09"
+            ]
+          ],
+          "stats": [
+            {
+              "k": "总文字复制比",
+              "v": "{{dup_rate}}%"
+            },
+            {
+              "k": "去除引用",
+              "v": "7.8%"
+            },
+            {
+              "k": "合格线",
+              "v": "20%"
+            }
+          ],
+          "note": "报告编号 CNKI-2026-0514-031；电子签章已验证。",
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.09"
+          }
+        },
+        {
+          "id": "quota",
+          "tab": "名额核定",
+          "icon": "额",
+          "kind": "quota",
+          "style": "certificate",
+          "org": "明州大学教务处",
+          "title": "校级优秀毕业论文名额核定单",
+          "subtitle": "QUOTA CONFIRMATION / SCHOOL LEVEL",
+          "ref": "JW-2026-0514-05",
+          "fields": [
+            [
+              "学院",
+              "文学院"
+            ],
+            [
+              "核定名额",
+              "1"
+            ],
+            [
+              "学院排序",
+              "1 / 1"
+            ],
+            [
+              "剩余名额",
+              "0"
+            ],
+            [
+              "核定日期",
+              "2026.05.06"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.06"
+          },
+          "note": "按学院排序等额推荐。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "论文题目",
+          "v": "{{cover_title}}",
+          "ok": true,
+          "source": "recommend"
+        },
+        {
+          "k": "查重报告",
+          "v": "{{dup_rate}}%",
+          "ok": true,
+          "source": "report"
+        },
+        {
+          "k": "推荐表填报",
+          "v": "{{dup_rate}}%",
+          "ok": true,
+          "source": "recommend"
+        },
+        {
+          "k": "学院名额",
+          "v": "1 / 1",
+          "ok": true,
+          "source": "quota"
+        }
+      ],
+      "expected": "approve",
+      "approveText": "推荐材料齐全，报教务处。",
+      "returnText": "材料不齐，退回补正。",
+      "favor": {
+        "approve": {
+          "leader": 1,
+          "student": 1
+        },
+        "return": {
+          "director": 1,
+          "student": -1
+        }
+      },
+      "day": 4,
+      "applicantIndex": 2,
+      "applicantId": "2022010728"
+    },
+    {
+      "id": "scholarship-d5-school",
+      "kind": "scholarship",
+      "variant": "校级",
+      "material": "certificate",
+      "title": "校级奖学金申请表",
+      "subtitle": "SCHOOL SCHOLARSHIP / 2026",
+      "header": "奖学金评审",
+      "seal": "学生处",
+      "summary": "绩点 3.21，低于校级 3.5 门槛。",
+      "criteria": [
+        "学年绩点不低于 3.5",
+        "班级公示满 3 个工作日",
+        "学院名额未超额"
+      ],
+      "documents": [
+        {
+          "id": "application",
+          "tab": "申请表",
+          "icon": "申",
+          "kind": "application",
+          "style": "certificate",
+          "org": "明州大学学生工作处",
+          "title": "校级奖学金申请表",
+          "subtitle": "SCHOOL SCHOLARSHIP / 2026",
+          "ref": "MDXG-2026-0515-14",
+          "photo": true,
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院",
+              "{{college}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "学年",
+              "2025—2026"
+            ],
+            [
+              "综合测评",
+              "45 / 118"
+            ],
+            [
+              "申请档次",
+              "校级奖学金"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "申请理由",
+              "text": "本学年参与两项课程实践，完成校级创新项目结题，希望申请校级奖学金。"
+            }
+          ],
+          "signature": [
+            [
+              "申请人签字",
+              "{{name}}"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学生工作处",
+            "date": "2026.05.15"
+          },
+          "note": "校级奖学金绩点门槛为 3.5。"
+        },
+        {
+          "id": "transcript",
+          "tab": "成绩单",
+          "icon": "绩",
+          "kind": "transcript",
+          "style": "sealed",
+          "org": "明州大学教务处",
+          "title": "2025—2026 学年成绩单",
+          "subtitle": "ACADEMIC TRANSCRIPT / SEALED",
+          "ref": "JW-2026-0515-203",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "课程",
+              "学分",
+              "成绩"
+            ],
+            "rows": [
+              [
+                "植物学",
+                "3.0",
+                "78"
+              ],
+              [
+                "动物学",
+                "3.0",
+                "82"
+              ],
+              [
+                "生物化学",
+                "3.0",
+                "76"
+              ],
+              [
+                "遗传学",
+                "3.0",
+                "85"
+              ],
+              [
+                "生态学",
+                "2.0",
+                "79"
+              ],
+              [
+                "专业实习",
+                "4.0",
+                "优秀"
+              ]
+            ]
+          },
+          "stats": [
+            {
+              "k": "学年绩点",
+              "v": "3.21 / 4.0"
+            },
+            {
+              "k": "专业排名",
+              "v": "45 / 118"
+            },
+            {
+              "k": "已修学分",
+              "v": "164 / 160"
+            }
+          ],
+          "note": "本成绩单由教务管理系统生成，涂改无效；核验码 JW-203-2026。",
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.15"
+          }
+        },
+        {
+          "id": "notice",
+          "tab": "班级公示",
+          "icon": "示",
+          "kind": "notice",
+          "style": "mimeo",
+          "org": "明州大学 · 商学院",
+          "title": "校级奖学金班级公示",
+          "subtitle": "CLASS NOTICE / 2025—2026",
+          "ref": "公示〔2026〕第 19 号",
+          "fields": [
+            [
+              "公示对象",
+              "{{name}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "公示期",
+              "2026.05.11—2026.05.13（3 个工作日）"
+            ],
+            [
+              "公示地点",
+              "商学院公告栏"
+            ],
+            [
+              "异议受理",
+              "学院学生工作办公室"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "公示说明",
+              "text": "经班级评议小组推荐，现将校级奖学金拟推荐名单公示 3 个工作日。"
+            }
+          ],
+          "table": {
+            "columns": [
+              "序号",
+              "姓名",
+              "学号",
+              "综合测评"
+            ],
+            "rows": [
+              [
+                "1",
+                "{{name}}",
+                "{{studentId}}",
+                "45 / 118"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "班委会",
+              "赵一鸣"
+            ],
+            [
+              "日期",
+              "2026.05.13"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "商学院",
+            "date": "2026.05.13"
+          },
+          "note": "公示期满，无异议。"
+        },
+        {
+          "id": "quota",
+          "tab": "名额核定",
+          "icon": "额",
+          "kind": "quota",
+          "style": "cardstock",
+          "org": "明州大学学生工作处",
+          "title": "校级奖学金名额核定单",
+          "subtitle": "QUOTA CONFIRMATION / SCHOOL LEVEL",
+          "ref": "ME-2026-0515-08",
+          "fields": [
+            [
+              "学院",
+              "商学院"
+            ],
+            [
+              "核定名额",
+              "5"
+            ],
+            [
+              "已推荐",
+              "3"
+            ],
+            [
+              "剩余名额",
+              "2"
+            ],
+            [
+              "核定日期",
+              "2026.04.30"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "学生工作处",
+            "date": "2026.04.30"
+          },
+          "note": "名额未满。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "学年绩点",
+          "v": "3.21 / 4.0（低于 3.5）",
+          "ok": false,
+          "source": "transcript"
+        },
+        {
+          "k": "专业排名",
+          "v": "45 / 118",
+          "ok": true,
+          "source": "transcript"
+        },
+        {
+          "k": "班级公示",
+          "v": "已公示 3 个工作日",
+          "ok": true,
+          "source": "notice"
+        },
+        {
+          "k": "学院名额",
+          "v": "3 / 5",
+          "ok": true,
+          "source": "quota"
+        }
+      ],
+      "expected": "return",
+      "approveText": "材料齐全，报学生处。",
+      "returnText": "绩点未达校级奖学金 3.5 门槛。",
+      "favor": {
+        "approve": {
+          "director": 2,
+          "student": 1
+        },
+        "return": {
+          "director": 1,
+          "student": -1
+        }
+      },
+      "day": 5,
+      "applicantIndex": 0,
+      "applicantId": "2022010814"
+    },
+    {
+      "id": "lab-d5-access",
+      "kind": "lab",
+      "variant": "实验室使用",
+      "material": "certificate",
+      "title": "实验室使用申请表",
+      "subtitle": "LABORATORY ACCESS APPLICATION",
+      "header": "实验室安全",
+      "seal": "实验室中心",
+      "summary": "安全培训有效，导师与风险评估齐全。",
+      "criteria": [
+        "安全培训在有效期内",
+        "导师签字与实验计划一致",
+        "涉及危化品须附风险评估",
+        "使用时段与设备排期不冲突"
+      ],
+      "documents": [
+        {
+          "id": "lab-application",
+          "tab": "使用申请",
+          "icon": "验",
+          "kind": "application",
+          "style": "certificate",
+          "org": "明州大学实验室中心",
+          "title": "实验室使用申请表",
+          "subtitle": "LABORATORY ACCESS APPLICATION",
+          "ref": "SY-2026-0515-11",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "实验室",
+              "材料化学 B-204"
+            ],
+            [
+              "使用时段",
+              "2026.05.18—05.22"
+            ],
+            [
+              "实验项目",
+              "高分子薄膜制备"
+            ],
+            [
+              "危化品",
+              "乙醇、丙酮（微量）"
+            ],
+            [
+              "导师",
+              "{{advisor}}"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "实验计划",
+              "text": "完成三组高分子薄膜样品制备与拉伸测试，每天 09:00—17:00，使用通风橱与旋涂仪。"
+            },
+            {
+              "label": "导师意见",
+              "text": "实验方案与课程安排不冲突，已确认设备档期；危化品按实验室规范领用。"
+            }
+          ],
+          "signature": [
+            [
+              "申请人",
+              "{{name}}"
+            ],
+            [
+              "导师",
+              "{{advisor}}"
+            ],
+            [
+              "实验室中心",
+              "顾老师"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "实验室中心",
+            "date": "2026.05.15"
+          },
+          "note": "首次进入 B-204 须由安全员带教；实验结束后提交废液回收记录。"
+        },
+        {
+          "id": "lab-safety",
+          "tab": "安全培训",
+          "icon": "安",
+          "kind": "id_card",
+          "style": "id_card",
+          "org": "明州大学实验室安全办公室",
+          "title": "实验室安全培训合格证",
+          "subtitle": "LAB SAFETY TRAINING CARD",
+          "ref": "AQ-2025-0902-66",
+          "photo": true,
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "培训日期",
+              "2025.09.02"
+            ],
+            [
+              "有效期至",
+              "2027.03.31"
+            ],
+            [
+              "培训等级",
+              "化学安全 / 二级"
+            ],
+            [
+              "考核结果",
+              "合格"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "培训内容",
+              "text": "危化品分类与存放、通风橱使用、个人防护、泄漏处置、废液分类。"
+            }
+          ],
+          "signature": [
+            [
+              "安全员",
+              "顾老师"
+            ],
+            [
+              "日期",
+              "2025.09.02"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "实验室安全办公室",
+            "date": "2025.09.02"
+          },
+          "note": "培训证在有效期内；进入实验室须随身携带。"
+        },
+        {
+          "id": "risk-assessment",
+          "tab": "风险评估",
+          "icon": "评",
+          "kind": "slip",
+          "style": "carbonless",
+          "org": "明州大学实验室中心 · 风险评估",
+          "title": "实验风险评估表",
+          "subtitle": "RISK ASSESSMENT / CHEMICAL",
+          "ref": "FX-2026-0515-03",
+          "fields": [
+            [
+              "实验项目",
+              "高分子薄膜制备"
+            ],
+            [
+              "危化品",
+              "乙醇、丙酮"
+            ],
+            [
+              "风险等级",
+              "低—中"
+            ],
+            [
+              "防护",
+              "护目镜、丁腈手套、通风橱"
+            ],
+            [
+              "废弃物",
+              "有机废液桶 A"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "控制措施",
+              "text": "全程在通风橱内操作；丙酮远离明火；废液按有机溶剂分类回收，禁止倒入水槽。"
+            }
+          ],
+          "signature": [
+            [
+              "评估人",
+              "{{advisor}}"
+            ],
+            [
+              "安全员",
+              "顾老师"
+            ],
+            [
+              "日期",
+              "2026.05.15"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "实验室中心",
+            "date": "2026.05.15"
+          },
+          "note": "风险评估须与使用申请一并归档。"
+        },
+        {
+          "id": "lab-schedule",
+          "tab": "设备排期",
+          "icon": "期",
+          "kind": "slip",
+          "style": "index_card",
+          "org": "材料化学 B-204 · 设备排期",
+          "title": "设备使用排期卡",
+          "subtitle": "EQUIPMENT SCHEDULE / B-204",
+          "ref": "PQ-2026-0515-09",
+          "fields": [
+            [
+              "实验室",
+              "B-204"
+            ],
+            [
+              "设备",
+              "旋涂仪 / 拉伸试验机"
+            ],
+            [
+              "申请人时段",
+              "05.18—05.22 09:00—17:00"
+            ],
+            [
+              "冲突检查",
+              "无冲突"
+            ],
+            [
+              "管理员",
+              "顾老师"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "日期",
+              "设备",
+              "时段"
+            ],
+            "rows": [
+              [
+                "05.18",
+                "旋涂仪",
+                "09:00—12:00"
+              ],
+              [
+                "05.20",
+                "拉伸试验机",
+                "13:00—17:00"
+              ],
+              [
+                "05.22",
+                "旋涂仪",
+                "09:00—12:00"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "设备管理员",
+              "顾老师"
+            ],
+            [
+              "日期",
+              "2026.05.15"
+            ]
+          ],
+          "note": "超时使用须提前一天改约。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "安全培训",
+          "v": "有效期至 2027.03.31",
+          "ok": true,
+          "source": "lab-safety"
+        },
+        {
+          "k": "导师签字",
+          "v": "已签",
+          "ok": true,
+          "source": "lab-application"
+        },
+        {
+          "k": "风险评估",
+          "v": "已附",
+          "ok": true,
+          "source": "risk-assessment"
+        },
+        {
+          "k": "设备冲突",
+          "v": "无",
+          "ok": true,
+          "source": "lab-schedule"
+        }
+      ],
+      "expected": "approve",
+      "approveText": "材料与安全手续齐全，同意使用 B-204。",
+      "returnText": "安全手续不齐，暂不开放实验室。",
+      "favor": {
+        "approve": {
+          "colleague": 2
+        },
+        "return": {
+          "colleague": 1
+        }
+      },
+      "day": 5,
+      "applicantIndex": 1,
+      "applicantId": "2022010822"
+    },
+    {
+      "id": "leave-d6-3d",
+      "kind": "leave",
+      "variant": "3 天",
+      "material": "carbonless",
+      "title": "学生请假条",
+      "subtitle": "LEAVE APPLICATION / 3 DAYS",
+      "header": "请假申请",
+      "seal": "辅导员",
+      "summary": "家庭事务，导师与家长均已确认。",
+      "criteria": [
+        "请假 3 天由辅导员审批",
+        "导师签字、家长知情",
+        "无课程冲突"
+      ],
+      "documents": [
+        {
+          "id": "leave-form",
+          "tab": "请假条",
+          "icon": "假",
+          "kind": "leave",
+          "style": "carbonless",
+          "org": "明州大学 · 学生请假审批单",
+          "title": "学生请假条",
+          "subtitle": "LEAVE APPLICATION / 3 DAYS",
+          "ref": "QJ-2026-0516-03",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "请假起止",
+              "2026.05.20—05.22（3 天）"
+            ],
+            [
+              "事由",
+              "家庭事务（附家长电话）"
+            ],
+            [
+              "联系电话",
+              "139****6621"
+            ],
+            [
+              "去向",
+              "明州市区"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "导师意见",
+              "text": "同意。已安排同学协助记录课程重点。"
+            },
+            {
+              "label": "家长确认",
+              "text": "已电话联系家长，确认学生按时返校。"
+            }
+          ],
+          "signature": [
+            [
+              "导师签字",
+              "{{advisor}}"
+            ],
+            [
+              "辅导员签字",
+              "沈老师"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "辅导员",
+            "date": "2026.05.16"
+          },
+          "note": "按《学生请假管理办法》第 3 条办理；3 天以内由辅导员审批。"
+        },
+        {
+          "id": "parent-note",
+          "tab": "家长确认",
+          "icon": "家",
+          "kind": "slip",
+          "style": "carbonless",
+          "org": "明州大学 · 学生工作办公室",
+          "title": "家长联系记录",
+          "subtitle": "GUARDIAN CONTACT LOG",
+          "ref": "JZ-2026-0516-11",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "家长",
+              "王女士"
+            ],
+            [
+              "联系电话",
+              "139****6621"
+            ],
+            [
+              "联系时间",
+              "2026.05.16 10:20"
+            ],
+            [
+              "联系结果",
+              "家长知情并同意"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "记录",
+              "text": "已告知请假起止、事由与返校时间；家长确认学生按时返校。"
+            }
+          ],
+          "signature": [
+            [
+              "经办人",
+              "沈老师"
+            ],
+            [
+              "日期",
+              "2026.05.16"
+            ]
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "k": "请假起止",
+          "v": "2026.05.20—05.22（3 天）",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "导师签字",
+          "v": "已签字",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "课程冲突",
+          "v": "无",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "家长确认",
+          "v": "已电话确认",
+          "ok": true,
+          "source": "parent-note"
+        }
+      ],
+      "expected": "approve",
+      "approveText": "手续齐全，准假 3 天。",
+      "returnText": "手续不全，按旷课处理。",
+      "favor": {
+        "approve": {
+          "counselor": 2,
+          "student": 1
+        },
+        "return": {
+          "counselor": -1,
+          "director": 1
+        }
+      },
+      "day": 6,
+      "applicantIndex": 0,
+      "applicantId": "2022010917"
+    },
+    {
+      "id": "internship-d6-recommend",
+      "kind": "internship",
+      "variant": "名企实习",
+      "material": "cardstock",
+      "title": "实习推荐表",
+      "subtitle": "INTERNSHIP RECOMMENDATION / 2026",
+      "header": "实习推荐",
+      "seal": "就业中心",
+      "summary": "推荐与协议齐全，但实习期与答辩冲突。",
+      "criteria": [
+        "实习岗位与专业相关",
+        "导师与学院推荐签字",
+        "三方协议与保险齐全",
+        "实习期不得与答辩或必修课冲突"
+      ],
+      "documents": [
+        {
+          "id": "internship-recommendation",
+          "tab": "推荐表",
+          "icon": "荐",
+          "kind": "recommend",
+          "style": "cardstock",
+          "org": "明州大学就业指导中心",
+          "title": "实习推荐表",
+          "subtitle": "INTERNSHIP RECOMMENDATION / 2026",
+          "ref": "JY-2026-0516-12",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "实习单位",
+              "明州云图科技有限公司"
+            ],
+            [
+              "岗位",
+              "数据分析实习生"
+            ],
+            [
+              "实习期",
+              "2026.05.18—08.20"
+            ],
+            [
+              "每周天数",
+              "5 天"
+            ],
+            [
+              "导师",
+              "{{advisor}}"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "推荐理由",
+              "text": "该生已完成数据库、统计学与 Python 课程，项目经历与岗位匹配；实习可认定 6 学分。"
+            },
+            {
+              "label": "学院意见",
+              "text": "同意推荐。请学生与单位确认实习期不与答辩、必修课冲突。"
+            }
+          ],
+          "signature": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "导师",
+              "{{advisor}}"
+            ],
+            [
+              "学院",
+              "韩老师"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "就业指导中心",
+            "date": "2026.05.16"
+          },
+          "note": "实习推荐表须附单位接收函、三方协议与保险凭证。"
+        },
+        {
+          "id": "internship-offer",
+          "tab": "单位接收",
+          "icon": "函",
+          "kind": "offer",
+          "style": "admission",
+          "org": "明州云图科技有限公司 · 人力资源部",
+          "title": "实习接收函",
+          "subtitle": "INTERNSHIP OFFER LETTER",
+          "ref": "YT-2026-0514-08",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "学校",
+              "明州大学"
+            ],
+            [
+              "岗位",
+              "数据分析实习生"
+            ],
+            [
+              "实习期",
+              "2026.05.18—08.20"
+            ],
+            [
+              "工作时间",
+              "周一至周五 09:00—18:00"
+            ],
+            [
+              "实习津贴",
+              "¥180 / 天"
+            ],
+            [
+              "保险",
+              "公司购买实习责任险"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "实习内容",
+              "text": "参与用户增长数据分析、周报自动化与实验评估；由数据组陈经理带教。"
+            },
+            {
+              "label": "录用条件",
+              "text": "请学校确认实习期与在校课程安排；如遇答辩或必修课，学生须提前请假。"
+            }
+          ],
+          "signature": [
+            [
+              "人力资源部",
+              "陈经理"
+            ],
+            [
+              "日期",
+              "2026.05.14"
+            ]
+          ],
+          "seal": {
+            "top": "明州云图科技有限公司",
+            "bottom": "人力资源部",
+            "date": "2026.05.14"
+          },
+          "note": "接收函不等同于三方协议。"
+        },
+        {
+          "id": "internship-agreement",
+          "tab": "三方协议",
+          "icon": "协",
+          "kind": "slip",
+          "style": "carbonless",
+          "org": "明州大学 · 实习三方协议",
+          "title": "实习三方协议",
+          "subtitle": "INTERNSHIP AGREEMENT / THREE PARTIES",
+          "ref": "SX-2026-0516-05",
+          "fields": [
+            [
+              "甲方",
+              "明州云图科技有限公司"
+            ],
+            [
+              "乙方",
+              "{{name}}（{{studentId}}）"
+            ],
+            [
+              "丙方",
+              "明州大学 {{college}}"
+            ],
+            [
+              "实习期",
+              "2026.05.18—08.20"
+            ],
+            [
+              "保险",
+              "已购买实习责任险"
+            ],
+            [
+              "学分认定",
+              "6 学分（待答辩后认定）"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "安全与保密",
+              "text": "学生须遵守单位保密制度与学校实习管理办法；实习期间人身意外保险由单位购买。"
+            }
+          ],
+          "signature": [
+            [
+              "甲方",
+              "陈经理"
+            ],
+            [
+              "乙方",
+              "{{name}}"
+            ],
+            [
+              "丙方",
+              "韩老师"
+            ],
+            [
+              "日期",
+              "2026.05.16"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "就业指导中心",
+            "date": "2026.05.16"
+          },
+          "note": "三方协议须在实习开始前完成签署。"
+        },
+        {
+          "id": "thesis-schedule",
+          "tab": "答辩安排",
+          "icon": "辩",
+          "kind": "slip",
+          "style": "index_card",
+          "org": "明州大学教务处 · 答辩安排",
+          "title": "毕业论文答辩安排",
+          "subtitle": "THESIS DEFENSE SCHEDULE",
+          "ref": "JW-2026-0516-21",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "答辩日期",
+              "2026.06.10"
+            ],
+            [
+              "答辩地点",
+              "文学院 A-302"
+            ],
+            [
+              "必修课",
+              "毕业论文写作（周三 3—4 节）"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "日期",
+              "事项",
+              "要求"
+            ],
+            "rows": [
+              [
+                "06.10",
+                "毕业论文答辩",
+                "必须到场"
+              ],
+              [
+                "05.18—06.20",
+                "毕业论文写作",
+                "周三必修"
+              ],
+              [
+                "06.25",
+                "成绩提交",
+                "导师签字"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "教务处",
+              "明州大学教务处"
+            ],
+            [
+              "日期",
+              "2026.05.16"
+            ]
+          ],
+          "note": "实习期与答辩、必修课时间冲突时，应调整实习安排或办理免修/请假手续。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "岗位匹配",
+          "v": "数据分析",
+          "ok": true,
+          "source": "internship-recommendation"
+        },
+        {
+          "k": "导师签字",
+          "v": "已签",
+          "ok": true,
+          "source": "internship-recommendation"
+        },
+        {
+          "k": "三方协议",
+          "v": "已签 / 有保险",
+          "ok": true,
+          "source": "internship-agreement"
+        },
+        {
+          "k": "答辩冲突",
+          "v": "06.10 答辩与实习重叠",
+          "ok": false,
+          "source": "thesis-schedule"
+        }
+      ],
+      "expected": "return",
+      "approveText": "材料齐全，同意实习；请按协议完成学分认定。",
+      "returnText": "实习期与答辩冲突，先调整实习安排或办理相关手续。",
+      "favor": {
+        "approve": {
+          "recruiter": 2,
+          "leader": 1
+        },
+        "return": {
+          "recruiter": 1,
+          "student": -1
+        }
+      },
+      "day": 6,
+      "applicantIndex": 2,
+      "applicantId": "2022010931"
+    },
+    {
+      "id": "leave-d7-7d",
+      "kind": "leave",
+      "variant": "7 天",
+      "material": "carbonless",
+      "title": "学生请假条",
+      "subtitle": "LEAVE APPLICATION / 7 DAYS",
+      "header": "请假申请",
+      "seal": "辅导员",
+      "summary": "超过 3 天且与两门专业课冲突。",
+      "criteria": [
+        "超过 3 天须教学院长审批",
+        "请假期间不得与专业课程冲突",
+        "事由与附件一致"
+      ],
+      "documents": [
+        {
+          "id": "leave-form",
+          "tab": "请假条",
+          "icon": "假",
+          "kind": "leave",
+          "style": "carbonless",
+          "org": "明州大学 · 学生请假审批单",
+          "title": "学生请假条",
+          "subtitle": "LEAVE APPLICATION / 7 DAYS",
+          "ref": "QJ-2026-0517-09",
+          "fields": [
+            [
+              "姓名",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "学院 / 专业",
+              "{{college}} / {{major}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "请假起止",
+              "2026.05.25—05.31（7 天）"
+            ],
+            [
+              "事由",
+              "校外实习"
+            ],
+            [
+              "联系电话",
+              "137****8890"
+            ],
+            [
+              "去向",
+              "明州高新区"
+            ]
+          ],
+          "paragraphs": [
+            {
+              "label": "导师意见",
+              "text": "同意。实习单位已出具接收函。"
+            },
+            {
+              "label": "辅导员意见",
+              "text": "超过 3 天，需教学院长审批。"
+            }
+          ],
+          "signature": [
+            [
+              "导师签字",
+              "{{advisor}}"
+            ],
+            [
+              "辅导员签字",
+              "沈老师"
+            ],
+            [
+              "教学院长",
+              "（未签字）"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "辅导员",
+            "date": "2026.05.17"
+          },
+          "note": "按《学生请假管理办法》第 5 条，超过 3 天须报教学院长审批。"
+        },
+        {
+          "id": "course-conflict",
+          "tab": "课程冲突",
+          "icon": "课",
+          "kind": "notice",
+          "style": "mimeo",
+          "org": "明州大学 · 外国语学院教务办",
+          "title": "请假期间课程冲突核查单",
+          "subtitle": "COURSE CONFLICT CHECK",
+          "ref": "KW-2026-0517-22",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "班级",
+              "{{clazz}}"
+            ],
+            [
+              "核查区间",
+              "2026.05.25—05.31"
+            ],
+            [
+              "结论",
+              "存在 2 门专业课程冲突"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "课程",
+              "任课教师",
+              "课时"
+            ],
+            "rows": [
+              [
+                "高级英语",
+                "{{advisor}}",
+                "4 节"
+              ],
+              [
+                "翻译理论",
+                "李老师",
+                "3 节"
+              ]
+            ]
+          },
+          "paragraphs": [
+            {
+              "label": "教务意见",
+              "text": "请假期间有 2 门专业课程，累计 7 节课时；须办理免听或调整实习时间。"
+            }
+          ],
+          "signature": [
+            [
+              "教务办",
+              "王老师"
+            ],
+            [
+              "日期",
+              "2026.05.17"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "外国语学院",
+            "date": "2026.05.17"
+          },
+          "note": "课程冲突未解决前不予批准。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "请假起止",
+          "v": "2026.05.25—05.31（7 天）",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "导师签字",
+          "v": "已签字",
+          "ok": true,
+          "source": "leave-form"
+        },
+        {
+          "k": "课程冲突",
+          "v": "有（两门专业课）",
+          "ok": false,
+          "source": "course-conflict"
+        },
+        {
+          "k": "教学院长",
+          "v": "未签字",
+          "ok": false,
+          "source": "leave-form"
+        }
+      ],
+      "expected": "return",
+      "approveText": "手续齐全，准假 7 天。",
+      "returnText": "超过 3 天且与课程冲突，退回补办。",
+      "favor": {
+        "approve": {
+          "counselor": 2,
+          "student": 1
+        },
+        "return": {
+          "counselor": -1,
+          "director": 1
+        }
+      },
+      "day": 7,
+      "applicantIndex": 0,
+      "applicantId": "2022011016"
+    },
+    {
+      "id": "honors-d7-province",
+      "kind": "honors",
+      "variant": "省级",
+      "material": "cardstock",
+      "title": "省级优秀毕业论文推荐表",
+      "subtitle": "OUTSTANDING THESIS / PROVINCIAL LEVEL",
+      "header": "优秀毕业论文",
+      "seal": "教务处",
+      "summary": "学院排序 2/1，省级名额已满。",
+      "criteria": [
+        "学院排序在省级名额范围内",
+        "推荐表与查重报告一致",
+        "导师推荐意见签字齐全"
+      ],
+      "documents": [
+        {
+          "id": "recommend",
+          "tab": "推荐表",
+          "icon": "荐",
+          "kind": "recommend",
+          "style": "cardstock",
+          "org": "明州大学 · 省级优秀毕业论文评审组",
+          "title": "省级优秀毕业论文推荐表",
+          "subtitle": "OUTSTANDING THESIS / PROVINCIAL LEVEL",
+          "ref": "YX-2026-0517-03",
+          "fields": [
+            [
+              "学生",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "专业",
+              "{{major}}"
+            ],
+            [
+              "论文题目",
+              "{{cover_title}}"
+            ],
+            [
+              "推荐级别",
+              "省级"
+            ],
+            [
+              "学院排序",
+              "2 / 1"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "项目",
+              "推荐表填报",
+              "查重报告"
+            ],
+            "rows": [
+              [
+                "文字复制比",
+                "{{dup_rate}}%",
+                "{{dup_rate}}%"
+              ],
+              [
+                "论文题目",
+                "{{cover_title}}",
+                "{{cover_title}}"
+              ]
+            ]
+          },
+          "paragraphs": [
+            {
+              "label": "推荐意见",
+              "text": "该论文已通过校级评审，拟推荐参评省级优秀毕业论文。"
+            }
+          ],
+          "signature": [
+            [
+              "指导教师",
+              "{{advisor}}"
+            ],
+            [
+              "学院评审组",
+              "李院长"
+            ],
+            [
+              "日期",
+              "{{dayDate}}"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.17"
+          },
+          "note": "省级名额 1 名，学院排序第 2，名额已满。"
+        },
+        {
+          "id": "report",
+          "tab": "查重报告",
+          "icon": "重",
+          "kind": "report",
+          "style": "sealed",
+          "org": "明州大学教务处 · 学术不端检测系统",
+          "title": "毕业论文查重报告",
+          "subtitle": "SIMILARITY REPORT / SEALED",
+          "ref": "CNKI-2026-0517-044",
+          "fields": [
+            [
+              "论文题目",
+              "{{cover_title}}"
+            ],
+            [
+              "作者",
+              "{{name}}"
+            ],
+            [
+              "学号",
+              "{{studentId}}"
+            ],
+            [
+              "检测系统",
+              "CNKI 5.3 / 学术不端文献检测"
+            ],
+            [
+              "检测日期",
+              "2026.05.12"
+            ]
+          ],
+          "stats": [
+            {
+              "k": "总文字复制比",
+              "v": "{{dup_rate}}%"
+            },
+            {
+              "k": "去除引用",
+              "v": "8.1%"
+            },
+            {
+              "k": "合格线",
+              "v": "20%"
+            }
+          ],
+          "note": "报告编号 CNKI-2026-0517-044；电子签章已验证。",
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.12"
+          }
+        },
+        {
+          "id": "ranking",
+          "tab": "学院排序",
+          "icon": "序",
+          "kind": "quota",
+          "style": "certificate",
+          "org": "明州大学教务处",
+          "title": "省级优秀毕业论文推荐排序",
+          "subtitle": "PROVINCIAL RANKING / 2026",
+          "ref": "JW-2026-0517-09",
+          "fields": [
+            [
+              "学院",
+              "文学院"
+            ],
+            [
+              "省级名额",
+              "1"
+            ],
+            [
+              "学院排序",
+              "2 / 1"
+            ],
+            [
+              "名额状态",
+              "已满"
+            ],
+            [
+              "核定日期",
+              "2026.05.15"
+            ]
+          ],
+          "table": {
+            "columns": [
+              "排序",
+              "姓名",
+              "论文题目"
+            ],
+            "rows": [
+              [
+                "1",
+                "林小满",
+                "县级融媒体中心的传播实践"
+              ],
+              [
+                "2",
+                "{{name}}",
+                "{{cover_title}}"
+              ]
+            ]
+          },
+          "signature": [
+            [
+              "教务处",
+              "周老师"
+            ],
+            [
+              "日期",
+              "2026.05.15"
+            ]
+          ],
+          "seal": {
+            "top": "明州大学",
+            "bottom": "教务处",
+            "date": "2026.05.15"
+          },
+          "note": "按学院排序等额推荐，名额已满不再递补。"
+        }
+      ],
+      "checks": [
+        {
+          "k": "论文题目",
+          "v": "{{cover_title}}",
+          "ok": true,
+          "source": "recommend"
+        },
+        {
+          "k": "查重报告",
+          "v": "{{dup_rate}}%",
+          "ok": true,
+          "source": "report"
+        },
+        {
+          "k": "学院排序",
+          "v": "2 / 1（名额已满）",
+          "ok": false,
+          "source": "ranking"
+        },
+        {
+          "k": "导师推荐",
+          "v": "已签字",
+          "ok": true,
+          "source": "recommend"
+        }
+      ],
+      "expected": "return",
+      "approveText": "推荐材料齐全，报省教育厅。",
+      "returnText": "学院排序不占名额，退回。",
+      "favor": {
+        "approve": {
+          "leader": 1,
+          "student": 1
+        },
+        "return": {
+          "director": 1,
+          "student": -1
+        }
+      },
+      "day": 7,
+      "applicantIndex": 2,
+      "applicantId": "2022011031"
+    }
+  ]
+}

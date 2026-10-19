@@ -1,0 +1,946 @@
+{
+  "dialogue": [
+    {
+      "name": "absent",
+      "value": null,
+      "valid": true
+    },
+    {
+      "name": "branch",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end"
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "name": "missing-target",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "missing"
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.target"
+    },
+    {
+      "name": "missing-start",
+      "value": {
+        "start": "missing",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end"
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.start"
+    },
+    {
+      "name": "duplicate-node",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end"
+              }
+            ]
+          },
+          {
+            "id": "start",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.duplicate_id"
+    },
+    {
+      "name": "empty-label",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": " ",
+                "next": "end"
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.label"
+    },
+    {
+      "name": "negative-time",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end",
+                "timeSaved": -2
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.timeSaved"
+    },
+    {
+      "name": "fractional-time",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end",
+                "timeSaved": 1.2
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.timeSaved"
+    },
+    {
+      "name": "invalid-choices",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": {}
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.choices"
+    },
+    {
+      "name": "too-many-choices",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "ok"
+              },
+              {
+                "label": "ok"
+              },
+              {
+                "label": "ok"
+              },
+              {
+                "label": "ok"
+              },
+              {
+                "label": "ok"
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.choices"
+    },
+    {
+      "name": "unknown-speaker",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "invalid",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end"
+              }
+            ]
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.speaker"
+    },
+    {
+      "name": "negative-delay",
+      "value": {
+        "start": "start",
+        "nodes": [
+          {
+            "id": "start",
+            "speaker": "student",
+            "text": "Hello",
+            "choices": [
+              {
+                "label": "OK",
+                "next": "end"
+              }
+            ],
+            "delay": -1
+          },
+          {
+            "id": "end",
+            "speaker": "system",
+            "text": "Done"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.delay"
+    },
+    {
+      "name": "automatic-cycle",
+      "value": {
+        "start": "a",
+        "nodes": [
+          {
+            "id": "a",
+            "next": "a"
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.automatic_cycle"
+    },
+    {
+      "name": "wrong-root",
+      "value": [],
+      "valid": false,
+      "code": "dialogue.object"
+    },
+    {
+      "name": "wrong-nodes",
+      "value": {
+        "nodes": [
+          1
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.nodes"
+    },
+    {
+      "name": "choice-loop",
+      "value": {
+        "start": "a",
+        "nodes": [
+          {
+            "id": "a",
+            "choices": [
+              {
+                "label": "again",
+                "next": "a"
+              },
+              {
+                "label": "finish"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "name": "speaker-NoneType",
+      "value": {
+        "start": "a",
+        "nodes": [
+          {
+            "id": "a",
+            "speaker": null
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.speaker"
+    },
+    {
+      "name": "speaker-list",
+      "value": {
+        "start": "a",
+        "nodes": [
+          {
+            "id": "a",
+            "speaker": []
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.speaker"
+    },
+    {
+      "name": "speaker-dict",
+      "value": {
+        "start": "a",
+        "nodes": [
+          {
+            "id": "a",
+            "speaker": {}
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.speaker"
+    },
+    {
+      "name": "null-choice-style",
+      "value": {
+        "start": "a",
+        "nodes": [
+          {
+            "id": "a",
+            "choices": [
+              {
+                "label": "x",
+                "style": null
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "dialogue.style"
+    }
+  ],
+  "logic": [
+    {
+      "name": "empty-logic",
+      "value": {
+        "chains": []
+      },
+      "valid": true
+    },
+    {
+      "name": "simple-logic",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "end"
+              },
+              {
+                "id": "end",
+                "type": "result",
+                "result": "approve"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": true
+    },
+    {
+      "name": "bad-entry",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "end",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "end"
+              },
+              {
+                "id": "end",
+                "type": "result",
+                "result": "approve"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.entry"
+    },
+    {
+      "name": "duplicate-id",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "end"
+              },
+              {
+                "id": "start",
+                "type": "result",
+                "result": "approve"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.duplicate_node"
+    },
+    {
+      "name": "unknown-type",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "end"
+              },
+              {
+                "id": "end",
+                "type": "oops",
+                "result": "approve"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.type"
+    },
+    {
+      "name": "bad-result",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "end"
+              },
+              {
+                "id": "end",
+                "type": "result",
+                "result": "oops"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.result"
+    },
+    {
+      "name": "unknown-edge",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "missing"
+              },
+              {
+                "id": "end",
+                "type": "result",
+                "result": "approve"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.target"
+    },
+    {
+      "name": "cycle",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "start"
+              },
+              {
+                "id": "end",
+                "type": "result",
+                "result": "approve"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.cycle"
+    },
+    {
+      "name": "result-edge",
+      "value": {
+        "chains": [
+          {
+            "id": "rule",
+            "entry": "start",
+            "nodes": [
+              {
+                "id": "start",
+                "type": "start",
+                "next": "end"
+              },
+              {
+                "id": "end",
+                "type": "result",
+                "result": "approve",
+                "next": "start"
+              }
+            ]
+          }
+        ]
+      },
+      "valid": false,
+      "code": "logic.result_edges"
+    }
+  ],
+  "project": [
+    {
+      "name": "missing-name",
+      "path": [
+        "characters",
+        0,
+        "name"
+      ],
+      "value": "",
+      "valid": false
+    },
+    {
+      "name": "empty-queue",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue"
+      ],
+      "value": [],
+      "valid": false
+    },
+    {
+      "name": "missing-character",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue",
+        0,
+        "characterId"
+      ],
+      "value": "absent",
+      "valid": false
+    },
+    {
+      "name": "missing-case",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue",
+        0,
+        "caseId"
+      ],
+      "value": "absent",
+      "valid": false
+    },
+    {
+      "name": "missing-task",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue",
+        0,
+        "taskId"
+      ],
+      "value": "absent",
+      "valid": false
+    },
+    {
+      "name": "unattached-task",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue",
+        0,
+        "taskId"
+      ],
+      "value": null,
+      "valid": false
+    },
+    {
+      "name": "bad-verdict",
+      "path": [
+        "tasks",
+        0,
+        "expected"
+      ],
+      "value": "reject",
+      "valid": false
+    },
+    {
+      "name": "no-documents",
+      "path": [
+        "tasks",
+        0,
+        "documents"
+      ],
+      "value": [],
+      "valid": false
+    },
+    {
+      "name": "no-document-id",
+      "path": [
+        "tasks",
+        0,
+        "documents",
+        0,
+        "id"
+      ],
+      "value": "",
+      "valid": false
+    },
+    {
+      "name": "bad-style",
+      "path": [
+        "tasks",
+        0,
+        "documents",
+        0,
+        "style"
+      ],
+      "value": "absent",
+      "valid": false
+    },
+    {
+      "name": "bad-check-source",
+      "path": [
+        "tasks",
+        0,
+        "checks"
+      ],
+      "value": [
+        {
+          "source": "absent"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "name": "bad-placeholder",
+      "path": [
+        "tasks",
+        0,
+        "title"
+      ],
+      "value": "{{student",
+      "valid": false
+    },
+    {
+      "name": "good-placeholder",
+      "path": [
+        "tasks",
+        0,
+        "title"
+      ],
+      "value": "{{student}}",
+      "valid": true
+    },
+    {
+      "name": "duplicate-character",
+      "path": [
+        "characters",
+        1,
+        "id"
+      ],
+      "copy": [
+        "characters",
+        0,
+        "id"
+      ],
+      "valid": false
+    },
+    {
+      "name": "duplicate-case",
+      "path": [
+        "cases",
+        1,
+        "id"
+      ],
+      "copy": [
+        "cases",
+        0,
+        "id"
+      ],
+      "valid": false
+    },
+    {
+      "name": "duplicate-level",
+      "path": [
+        "levels_doc",
+        "levels",
+        1,
+        "id"
+      ],
+      "copy": [
+        "levels_doc",
+        "levels",
+        0,
+        "id"
+      ],
+      "valid": false
+    },
+    {
+      "name": "duplicate-task",
+      "path": [
+        "tasks",
+        1,
+        "id"
+      ],
+      "copy": [
+        "tasks",
+        0,
+        "id"
+      ],
+      "valid": false
+    },
+    {
+      "name": "duplicate-slot",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue",
+        1,
+        "taskId"
+      ],
+      "copy": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue",
+        0,
+        "taskId"
+      ],
+      "valid": false
+    },
+    {
+      "name": "numeric-id",
+      "path": [
+        "characters",
+        0,
+        "id"
+      ],
+      "value": 2,
+      "valid": false
+    },
+    {
+      "name": "bad-documents-shape",
+      "path": [
+        "tasks",
+        0,
+        "documents"
+      ],
+      "value": "invalid",
+      "valid": false
+    },
+    {
+      "name": "null-case",
+      "path": [
+        "cases",
+        0
+      ],
+      "value": null,
+      "valid": false
+    },
+    {
+      "name": "fractional-day",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "day"
+      ],
+      "value": 1.5,
+      "valid": false
+    },
+    {
+      "name": "null-keywords",
+      "path": [
+        "cases",
+        0,
+        "keywords"
+      ],
+      "value": null,
+      "valid": false
+    },
+    {
+      "name": "null-name",
+      "path": [
+        "characters",
+        0,
+        "name"
+      ],
+      "value": null,
+      "valid": false
+    },
+    {
+      "name": "bad-queue-shape",
+      "path": [
+        "levels_doc",
+        "levels",
+        0,
+        "queue"
+      ],
+      "value": {},
+      "valid": false
+    },
+    {
+      "name": "null-dup",
+      "path": [
+        "cases",
+        0,
+        "dup"
+      ],
+      "value": null,
+      "valid": false
+    },
+    {
+      "name": "null-chat",
+      "path": [
+        "cases",
+        0,
+        "chat"
+      ],
+      "value": null,
+      "valid": true
+    }
+  ]
+}

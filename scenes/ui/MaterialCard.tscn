@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/MaterialCard.gd" id="1"]
+
+[node name="MaterialCard" type="Control"]
+custom_minimum_size = Vector2(198, 43)
+offset_right = 198.0
+offset_bottom = 43.0
+script = ExtResource("1")
+bg_color = Color(0.847059, 0.784314, 0.635294, 1)
+border_width = 2
+border_color = Color(0.0901961, 0.0745098, 0.0509804, 1)
+shadow_offset = Vector2(2, 2)

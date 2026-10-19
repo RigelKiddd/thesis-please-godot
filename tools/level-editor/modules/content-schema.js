@@ -1,0 +1,251 @@
+// Generated from tools/content_schema.json; run tools/sync_content_schema.py.
+globalThis.ThesisEditor.contentSchema = {
+  "type": "object",
+  "properties": {
+    "world": {
+      "type": "object"
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "studentNo": {
+            "type": "string"
+          },
+          "major": {
+            "type": "string"
+          },
+          "college": {
+            "type": "string"
+          },
+          "clazz": {
+            "type": "string"
+          },
+          "grade": {
+            "type": "string"
+          },
+          "advisor": {
+            "type": "string"
+          },
+          "portrait": {
+            "type": "string"
+          },
+          "look": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "abstractTitle": {
+            "type": "string"
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "line": {
+            "type": "string"
+          },
+          "abstractChars": {
+            "type": "number"
+          },
+          "keywords": {
+            "type": "array"
+          },
+          "refs": {
+            "type": "array"
+          },
+          "body": {
+            "type": "object"
+          },
+          "form": {
+            "type": "object"
+          },
+          "cover": {
+            "type": "object",
+            "properties": {
+              "overrides": {
+                "type": "object"
+              }
+            },
+            "required": []
+          },
+          "dup": {
+            "type": "object",
+            "properties": {
+              "rate": {
+                "type": "number"
+              },
+              "seal": {
+                "type": "boolean"
+              },
+              "reportNo": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "system": {
+                "type": "string"
+              },
+              "overrides": {
+                "type": "object"
+              }
+            },
+            "required": []
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "levels_doc": {
+      "type": "object",
+      "properties": {
+        "levels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "weekday": {
+                "type": "string"
+              },
+              "shortDate": {
+                "type": "string"
+              },
+              "theme": {
+                "type": "string"
+              },
+              "notice": {
+                "type": "string"
+              },
+              "day": {
+                "type": "integer"
+              },
+              "queue": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "characterId": {
+                      "type": "string"
+                    },
+                    "caseId": {
+                      "type": "string"
+                    },
+                    "taskId": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "characterId",
+                    "caseId"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "queue"
+            ]
+          }
+        }
+      },
+      "required": [
+        "levels"
+      ]
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "style": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "style"
+              ]
+            }
+          },
+          "checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": []
+            }
+          }
+        },
+        "required": [
+          "id",
+          "expected",
+          "documents"
+        ]
+      }
+    }
+  },
+  "required": [
+    "world",
+    "characters",
+    "cases",
+    "levels_doc",
+    "tasks"
+  ]
+};

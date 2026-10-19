@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "chapter": {
+    "id": "chapter-1",
+    "title": "第一周",
+    "startDate": "2026.05.11"
+  },
+  "levels": [
+    {
+      "id": "level-1",
+      "day": 1,
+      "date": "2026.05.11",
+      "weekday": "周一",
+      "shortDate": "5月11日",
+      "theme": "格式审查",
+      "notice": "本科毕业论文答辩资格审查开始。你负责 03 窗口，每天 4 份材料，核对后盖章归档。",
+      "queue": [
+        {
+          "characterId": "char-2022010417",
+          "caseId": "case-2022010417",
+          "taskId": "leave-d1-1d"
+        },
+        {
+          "characterId": "char-2022010428",
+          "caseId": "case-2022010428",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010433",
+          "caseId": "case-2022010433",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010441",
+          "caseId": "case-2022010441",
+          "taskId": null
+        }
+      ]
+    },
+    {
+      "id": "level-2",
+      "day": 2,
+      "date": "2026.05.12",
+      "weekday": "周二",
+      "shortDate": "5月12日",
+      "theme": "摘要规格",
+      "notice": "今日起增加摘要规格审查：摘要 300–500 字，关键词 3–5 个。",
+      "queue": [
+        {
+          "characterId": "char-2022010516",
+          "caseId": "case-2022010516",
+          "taskId": "scholarship-d2-incentive"
+        },
+        {
+          "characterId": "char-2022010522",
+          "caseId": "case-2022010522",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010530",
+          "caseId": "case-2022010530",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010538",
+          "caseId": "case-2022010538",
+          "taskId": null
+        }
+      ]
+    },
+    {
+      "id": "level-3",
+      "day": 3,
+      "date": "2026.05.13",
+      "weekday": "周三",
+      "shortDate": "5月13日",
+      "theme": "查重报告",
+      "notice": "今日起所有论文须附查重报告，报告姓名、学号、签章须与封面一致。",
+      "queue": [
+        {
+          "characterId": "char-2022010611",
+          "caseId": "case-2022010611",
+          "taskId": "scholarship-d3-national"
+        },
+        {
+          "characterId": "char-2022010619",
+          "caseId": "case-2022010619",
+          "taskId": "exchange-d3-exchange"
+        },
+        {
+          "characterId": "char-2022010625",
+          "caseId": "case-2022010625",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010632",
+          "caseId": "case-2022010632",
+          "taskId": null
+        }
+      ]
+    },
+    {
+      "id": "level-4",
+      "day": 4,
+      "date": "2026.05.14",
+      "weekday": "周四",
+      "shortDate": "5月14日",
+      "theme": "参考文献",
+      "notice": "今日核对参考文献的数量、时效与来源。",
+      "queue": [
+        {
+          "characterId": "char-2022010713",
+          "caseId": "case-2022010713",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010721",
+          "caseId": "case-2022010721",
+          "taskId": "honors-d4-college"
+        },
+        {
+          "characterId": "char-2022010728",
+          "caseId": "case-2022010728",
+          "taskId": "honors-d4-school"
+        },
+        {
+          "characterId": "char-2022010735",
+          "caseId": "case-2022010735",
+          "taskId": null
+        }
+      ]
+    },
+    {
+      "id": "level-5",
+      "day": 5,
+      "date": "2026.05.15",
+      "weekday": "周五",
+      "shortDate": "5月15日",
+      "theme": "正文页码",
+      "notice": "正文少于 20 页，或页码不连续，直接退回。",
+      "queue": [
+        {
+          "characterId": "char-2022010814",
+          "caseId": "case-2022010814",
+          "taskId": "scholarship-d5-school"
+        },
+        {
+          "characterId": "char-2022010822",
+          "caseId": "case-2022010822",
+          "taskId": "lab-d5-access"
+        },
+        {
+          "characterId": "char-2022010829",
+          "caseId": "case-2022010829",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010836",
+          "caseId": "case-2022010836",
+          "taskId": null
+        }
+      ]
+    },
+    {
+      "id": "level-6",
+      "day": 6,
+      "date": "2026.05.16",
+      "weekday": "周六",
+      "shortDate": "5月16日",
+      "theme": "资格审查表",
+      "notice": "今日核验答辩资格审查表：导师、系主任、教学院长三方签字缺一不可；人体研究须填伦理批件编号。",
+      "queue": [
+        {
+          "characterId": "char-2022010917",
+          "caseId": "case-2022010917",
+          "taskId": "leave-d6-3d"
+        },
+        {
+          "characterId": "char-2022010924",
+          "caseId": "case-2022010924",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022010931",
+          "caseId": "case-2022010931",
+          "taskId": "internship-d6-recommend"
+        },
+        {
+          "characterId": "char-2022010938",
+          "caseId": "case-2022010938",
+          "taskId": null
+        }
+      ]
+    },
+    {
+      "id": "level-7",
+      "day": 7,
+      "date": "2026.05.17",
+      "weekday": "周日",
+      "shortDate": "5月17日",
+      "theme": "终审日",
+      "notice": "终审日：学分未满 160 或学费未结清者，材料退回教务处。",
+      "queue": [
+        {
+          "characterId": "char-2022011016",
+          "caseId": "case-2022011016",
+          "taskId": "leave-d7-7d"
+        },
+        {
+          "characterId": "char-2022011024",
+          "caseId": "case-2022011024",
+          "taskId": null
+        },
+        {
+          "characterId": "char-2022011031",
+          "caseId": "case-2022011031",
+          "taskId": "honors-d7-province"
+        },
+        {
+          "characterId": "char-2022011038",
+          "caseId": "case-2022011038",
+          "taskId": null
+        }
+      ]
+    }
+  ]
+}

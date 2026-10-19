@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>论文审批处 · 关卡编辑器</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23a83a2f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f4e9c9'%3E审%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app" class="app">
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <div class="seal-mark">审</div>
+      <div class="brand-copy">
+        <div class="brand-kicker">THESIS, PLEASE / CONTENT WORKBENCH</div>
+        <div class="brand-title">关卡编辑器 <span id="version-pill" class="pill">v1.13</span></div>
+      </div>
+    </div>
+    <div class="project-line">
+      <span class="eyebrow">当前项目</span>
+      <button class="project-title" id="project-title" data-action="edit-chapter" title="修改章节标题">未载入</button>
+      <span class="dot" id="dirty-dot" title="有未保存修改"></span>
+      <span class="save-state" id="save-state">未载入</span>
+    </div>
+    <div class="top-actions">
+      <button class="btn ghost" data-action="open-folder" title="选择项目根目录或 content 文件夹">打开项目</button>
+      <button class="btn ghost" data-action="load-fetch" id="reload-btn" title="从 content/ 重新读取">重新读取</button>
+      <button class="btn primary" data-action="save-all" title="Ctrl+S">保存全部</button>
+      <button class="btn" data-action="export-game" title="编译为 assets/data.json 与 assets/requests.json">导出游戏数据</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="nav-label">工作台</div>
+      <nav id="nav" class="nav">
+        <button data-nav="overview" class="nav-item active"><span class="nav-icon">◇</span><span>概览</span><b id="nav-overview-count"></b></button>
+        <button data-nav="levels" class="nav-item"><span class="nav-icon">▤</span><span>关卡</span><b id="nav-level-count">—</b></button>
+        <button data-nav="characters" class="nav-item"><span class="nav-icon">人</span><span>人物</span><b id="nav-character-count">—</b></button>
+        <button data-nav="tasks" class="nav-item"><span class="nav-icon">札</span><span>待办包</span><b id="nav-task-count">—</b></button>
+        <button data-nav="logic" class="nav-item"><span class="nav-icon">分</span><span>条件链</span><b id="nav-logic-count">—</b></button>
+        <button data-nav="styles" class="nav-item"><span class="nav-icon">纸</span><span>纸张样式</span><b id="nav-style-count">—</b></button>
+        <button data-nav="publish" class="nav-item"><span class="nav-icon">✓</span><span>校验 / 发布</span><b id="nav-issue-count">—</b></button>
+      </nav>
+
+      <div class="side-section">
+        <div class="nav-label">内容健康</div>
+        <div class="health-box">
+          <div class="health-row"><span>人物</span><b id="side-chars">—</b></div>
+          <div class="health-row"><span>案例</span><b id="side-cases">—</b></div>
+          <div class="health-row"><span>关卡</span><b id="side-levels">—</b></div>
+          <div class="health-row"><span>待办包</span><b id="side-tasks">—</b></div>
+          <div class="health-row"><span>条件链</span><b id="side-logic">—</b></div>
+          <div class="health-row"><span>校验</span><b id="side-issues" class="ok">—</b></div>
+        </div>
+      </div>
+
+      <div class="side-section side-help">
+        <div class="nav-label">工作流</div>
+        <ol class="mini-steps">
+          <li>编辑人物、案例与关卡队列</li>
+          <li>把待办包挂到某个队列位置</li>
+          <li>校验后保存全部</li>
+          <li>保存后编译到 <code>assets/</code></li>
+        </ol>
+        <button class="link-btn" data-action="show-help">快捷键与字段说明 →</button>
+      </div>
+      <div class="side-foot">本地工具 · 不上传内容</div>
+    </aside>
+
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+<div id="modal-root" class="modal-root" aria-hidden="true"></div>
+
+<input type="file" id="file-input" accept=".json,application/json" multiple hidden />
+<input type="file" id="dir-input" webkitdirectory directory multiple hidden />
+
+<script src="modules/model.js"></script>
+<script src="modules/content-schema.js"></script>
+<script src="modules/controller.js"></script>
+<script src="modules/store.js"></script>
+<script src="modules/io.js"></script>
+<script src="modules/compiler.js"></script>
+<script src="modules/views-overview.js"></script>
+<script src="modules/views-characters.js"></script>
+<script src="modules/views-tasks.js"></script>
+<script src="modules/logic-engine.js"></script>
+<script src="modules/views-logic.js"></script>
+<script src="modules/views-publish.js"></script>
+<script src="modules/views-shell.js"></script>
+<script src="modules/contract.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

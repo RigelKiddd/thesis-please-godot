@@ -1,0 +1,12 @@
+.godot/
+_shots/
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+build/
+.tools/
+tools/toolchain.local.json
+__pycache__/
+*.log.err
